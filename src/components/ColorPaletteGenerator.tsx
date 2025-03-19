@@ -161,7 +161,7 @@ export default function ColorPaletteGenerator() {
   }, []);
 
   const handleFormatChange = useCallback((value: string) => {
-      setColorFormat(value as ColorFormat);
+    setColorFormat(value as ColorFormat);
   }, []);
 
   return (
@@ -177,9 +177,15 @@ export default function ColorPaletteGenerator() {
           <div className="flex justify-center gap-4 mb-6">
             <Tabs value={colorFormat}>
               <TabsList>
-                <TabsTrigger onValueChange={handleFormatChange} value="hex">HEX</TabsTrigger>
-                <TabsTrigger onValueChange={handleFormatChange} value="rgb">RGB</TabsTrigger>
-                <TabsTrigger onValueChange={handleFormatChange} value="hsl">HSL</TabsTrigger>
+                <TabsTrigger onValueChange={handleFormatChange} value="hex">
+                  HEX
+                </TabsTrigger>
+                <TabsTrigger onValueChange={handleFormatChange} value="rgb">
+                  RGB
+                </TabsTrigger>
+                <TabsTrigger onValueChange={handleFormatChange} value="hsl">
+                  HSL
+                </TabsTrigger>
               </TabsList>
             </Tabs>
 
