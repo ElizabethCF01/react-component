@@ -1,0 +1,43 @@
+.bg-primary {
+  background-color: hsl(222.2, 47.4%, 11.2%);
+}
+
+.text-primary-foreground {
+  color: hsl(210, 40%, 98%);
+}
+
+.hover\:bg-primary\/90:hover {
+  background-color: hsl(222.2, 47.4%, 11.2%, 0.9);
+}
+
+.border-input {
+  border-color: hsl(214.3, 31.8%, 91.4%);
+}
+
+.bg-background {
+  background-color: hsl(0, 0%, 100%);
+}
+
+.hover\:bg-accent:hover {
+  background-color: hsl(210, 40%, 96.1%);
+}
+
+.hover\:text-accent-foreground:hover {
+  color: hsl(222.2, 47.4%, 11.2%);
+}
+
+.text-primary {
+  color: hsl(222.2, 47.4%, 11.2%);
+}
+
+.focus-visible\:ring-ring:focus-visible {
+  --ring-color: hsl(215, 20.2%, 65.1%);
+}
+
+.focus-visible\:ring-offset-2:focus-visible {
+  --ring-offset-width: 2px;
+}
+
+.disabled\:opacity-50:disabled {
+  opacity: 0.5;
+}
