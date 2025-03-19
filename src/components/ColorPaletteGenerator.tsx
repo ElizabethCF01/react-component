@@ -220,7 +220,7 @@ export default function ColorPaletteGenerator() {
                   )}
                 </Button>
               </div>
-              <CardContent className="p-4">
+              <CardContent className=" p-4">
                 <div className="flex justify-between items-center">
                   <span className="font-mono text-sm truncate">
                     {getColorValue(color.hex)}
