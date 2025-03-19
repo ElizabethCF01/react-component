@@ -173,6 +173,8 @@ export default function ColorPaletteGenerator() {
                   <Button
                     variant="ghost"
                     size="icon"
+                    aria-label="Copy color"
+                    title="Copy color"
                     onClick={() => copyToClipboard(getColorValue(color.hex))}
                   >
                     <Copy className="h-4 w-4" />
