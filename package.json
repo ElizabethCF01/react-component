@@ -7,9 +7,11 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint  --fix",
+    "lint:check": "eslint .",
     "format:hook": "prettier --write --ignore-unknown",
     "preview": "vite preview",
     "format": "prettier --write src/",
+    "format:check": "prettier --check .", 
     "test": "vitest"
   },
   "dependencies": {
