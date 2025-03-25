@@ -32,6 +32,16 @@ jobs:
       - name: 🧪 Run tests (Vitest)
         run: npm test
 
+      - name: 🧪 Run Playwright Tests
+        run: npx playwright test
+      - name: 📊 Upload Playwright report
+        uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() }}
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 30
+      
       - name: 🔨 Build project
         run: npm run build
 

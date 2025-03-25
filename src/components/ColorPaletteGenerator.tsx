@@ -138,6 +138,7 @@ export default function ColorPaletteGenerator() {
               onClick={generateColors}
               variant="outline"
               className="gap-2 !px-5"
+              name="generate"
             >
               <RefreshCw className="h-4 " />
               Generate
@@ -149,6 +150,7 @@ export default function ColorPaletteGenerator() {
           {colors.map((color) => (
             <Card key={color.id} className="overflow-hidden">
               <div
+                data-testid={`color-box-${color.id}`}
                 className="h-40 flex items-center justify-center relative"
                 style={{ backgroundColor: color.hex }}
               >
@@ -157,6 +159,7 @@ export default function ColorPaletteGenerator() {
                   size="icon"
                   className={`absolute top-2 right-2 bg-white/10 backdrop-blur-sm ${getTextColor(color.hex)}`}
                   onClick={() => toggleLock(color.id)}
+                  data-testid={`lock-button-${color.id}`}
                 >
                   {color.isLocked ? (
                     <Lock className="h-4 w-4 text-black" />
@@ -175,6 +178,7 @@ export default function ColorPaletteGenerator() {
                     size="icon"
                     aria-label="Copy color"
                     title="Copy color"
+                    data-testid={`copy-button-${color.id}`}
                     onClick={() => copyToClipboard(getColorValue(color.hex))}
                   >
                     <Copy className="h-4 w-4" />
